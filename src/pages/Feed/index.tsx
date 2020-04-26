@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 import {
   Text, TouchableNativeFeedback,
 } from 'react-native';
-import { addOrientationListener } from 'react-native-orientation';
+import Orientation, { addOrientationListener } from 'react-native-orientation';
 
 import PageWithTitle from 'templetes/PageWithTitle';
 import { Workpaper } from 'types/workpaper';
@@ -20,6 +20,7 @@ import {
 export default (): JSX.Element => {
   const [workpapers, setWorkpapers] = useState<Workpaper[] | null>(null);
   const [refreshing, setRefreshing] = useState(false);
+  const [orientation, setOrientation] = useState(Orientation.getInitialOrientation());
   const sortedWorkpapers = workpapers?.reduce((acc: {
     [key: string]: Workpaper[];
   }, paper) => {
@@ -34,7 +35,11 @@ export default (): JSX.Element => {
       setWorkpapers(await getWorkpapers());
     })();
 
-    addOrientationListener((orientation) => console.log(orientation));
+    addOrientationListener(setOrientation);
+
+    return () => {
+      Orientation.removeOrientationListener(setOrientation);
+    };
   }, []);
   useEffect(() => {
     getWorkpapers().then((updatedWorkpapers) => {
@@ -55,7 +60,7 @@ export default (): JSX.Element => {
               <LeftDate>{title}</LeftDate>
               <FlatList
                 data={papers}
-                style={{ width: 300 }}
+                style={orientation === 'LANDSCAPE' ? { width: 300 } : {}}
                 keyExtractor={({ examTitle }) => examTitle}
                 renderItem={({ item: paper }) => (
                   <TouchableNativeFeedback
