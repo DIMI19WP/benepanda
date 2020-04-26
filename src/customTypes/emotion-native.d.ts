@@ -1,6 +1,8 @@
 declare module '@emotion/native' {
+  const date: number;
   // 타이핑할 모듈의 이름을 명시합니다
-  import ReactNative, {StyleProp} from 'react-native'; // ReactNative를 모듈을 가져옵니다
+  import ReactNative, { StyleProp } from 'react-native';
+ // ReactNative를 모듈을 가져옵니다
   interface StyledCustomElement {
     // style(Element) 문법을 위해 Callable하게 만들기 위한 인터페이스입니다
     <T>(CustomElement: React.ElementType<T>): (
@@ -16,6 +18,6 @@ declare module '@emotion/native' {
   } &
     StyledCustomElement; // 위에 선언한 Callable 문법을 적용해줍니다
 
-  export function css(style: TemplateStringsArray): StyleProp<any>; // css 문법을 추가합니다
+  export function css(style: TemplateStringsArray): StyleProp<any> // css 문법을 추가합니다
   export default styled;
 }
