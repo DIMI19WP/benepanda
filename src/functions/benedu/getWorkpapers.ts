@@ -14,17 +14,19 @@ export default async (): Promise<Workpaper[]> => {
       register, ,
       examTitle, ,
       questionQuantity, ,
-      state, , , , , , , , , ,
+      state, , solvedQuantity, , , , , , , ,
       startedAt, ,
       endedAt] = workpaper.childNodes.map((e) => e.rawText.trim());
+    console.log(questionQuantity, solvedQuantity);
     return {
       subject: subject as Subject,
       register,
       examTitle,
       questionQuantity: Number(questionQuantity),
+      solvedQuantity: Number(solvedQuantity),
       state,
       endedAt: Moment(endedAt),
       startedAt: Moment(startedAt),
     };
-  }).filter((e) => e.state !== '응시완료');
+  }).filter((e) => e.solvedQuantity !== e.questionQuantity);
 };
