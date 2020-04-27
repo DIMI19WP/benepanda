@@ -1,4 +1,5 @@
 import styled from '@emotion/native';
+import PageWithTitle from 'templetes/PageWithTitle';
 
 export const PaperWrapper = styled.View`
   background-color: white;
@@ -9,7 +10,7 @@ export const PaperWrapper = styled.View`
   flex-direction: row;
 `;
 
-export const ExamTitle = styled.Text`
+export const PaperTitle = styled.Text`
   font-size: 18px;
   font-family: 'NotoSansCJKkr-Black';
 `;
@@ -66,4 +67,28 @@ export const LeftDate = styled.Text`
   margin-bottom: 12px;
   opacity: 0.4;
   margin-top: 18px;
+`;
+
+export const PaperList = styled.FlatList`
+  flex-wrap: wrap;
+`;
+
+export const PaperGrid = styled.View`
+`;
+
+export const PaperListWrapper = styled.View`
+`;
+export const BottomSheetContentWrapper = styled.View`
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  bottom: 0;
+  position: absolute;
+  
+  border-radius: 24px;
+  padding: 24px;
+`;
+export const BottomSheetWrapper = styled.View`
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
 `;
