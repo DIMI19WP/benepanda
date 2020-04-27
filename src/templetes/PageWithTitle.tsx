@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import { Text } from 'react-native';
 import styled from '@emotion/native';
 
 const Title = styled.Text`
@@ -11,11 +10,13 @@ const Background = styled.View`
   background-color: #F6F8FA;
   min-height: 100%;
   padding: 12px 24px 0px 24px;  
+  box-sizing: border-box;
+  flex: 1;
 `;
 
-export default ({ titleText, children }:
+export default ({ titleText, children, ...params }:
   { titleText: string; children: ReactNode}): JSX.Element => (
-    <Background>
+    <Background {...params}>
       <Title>{titleText}</Title>
       <>{children}</>
     </Background>
