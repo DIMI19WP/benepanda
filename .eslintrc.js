@@ -34,6 +34,7 @@ module.exports = {
     "import/no-unresolved": "off",
     "import/extensions": "off",
     "no-useless-catch": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": "off"
   },
 };
