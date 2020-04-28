@@ -8,18 +8,18 @@ import moment from 'moment';
 import 'moment/locale/ko';
 
 import PageWithTitle from 'templetes/PageWithTitle';
-import { Workpaper } from 'types/workpaper';
-import getWorkpapers from 'functions/benedu/getWorkpapers';
+import { Paper } from 'types/paper';
+import getPapers from 'functions/benedu/getPapersList';
 import Panda from 'assets/panda.svg';
 import {
   EmptyWrapper, InfoKey, PaperWrapper, PaperTitle, InfoWrapper,
-  LeftDate, NoWorkpaper, PandaWrapper, PaperMainInfo, QuestionQuantityBadge,
-  BottomSheetContentWrapper, BottomSheetWrapper,
+  LeftDate, NoPaper, PandaWrapper, PaperMainInfo, QuestionQuantityBadge,
+  BottomSheetWrapper,
 } from './styleds';
 import DownloadModal from './DownloadModal';
 
 export default (): JSX.Element => {
-  const [workpapers, setWorkpapers] = useState<Workpaper[] | null>(null);
+  const [papers, setPapers] = useState<Paper[] | null>(null);
   const [refreshing, setRefreshing] = useState(false);
   const [screenHeight, setScreenHeight] = useState(Dimensions.get('window').height);
   const [isModalOpened, setIsModalOpened] = useState(false);
@@ -29,8 +29,8 @@ export default (): JSX.Element => {
   }>();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const bottomSheetRef = useRef<any>();
-  const sortedWorkpapers = workpapers?.reduce((acc: {
-    [key: string]: Workpaper[];
+  const sortedPapers = papers?.reduce((acc: {
+    [key: string]: Paper[];
   }, paper) => {
     const key = paper.endedAt.fromNow();
     if (acc[key]) acc[key] = [...acc[key], paper];
@@ -40,7 +40,7 @@ export default (): JSX.Element => {
   useEffect(() => {
     moment.locale('ko');
     (async (): Promise<void> => {
-      setWorkpapers(await getWorkpapers());
+      setPapers(await getPapers());
     })();
     function orientListener(): void {
       setScreenHeight(Dimensions.get('window').height);
@@ -61,29 +61,29 @@ export default (): JSX.Element => {
     return (): void => BackHandler.removeEventListener('hardwareBackPress', closeModal);
   }, [isModalOpened]);
   useEffect(() => {
-    getWorkpapers().then((updatedWorkpapers) => {
-      setWorkpapers(updatedWorkpapers);
+    getPapers().then((updatedPapers) => {
+      setPapers(updatedPapers);
       setRefreshing(false);
     });
   }, [refreshing]);
-  if (workpapers === null) return (<></>);
+  if (papers === null) return (<></>);
   return (
     <>
-      <PageWithTitle titleText={`밀린 과제 ${workpapers.length}개`}>
-        {workpapers.length !== 0 ? (
-          sortedWorkpapers && (
+      <PageWithTitle titleText={`밀린 과제 ${papers.length}개`}>
+        {papers.length !== 0 ? (
+          sortedPapers && (
           <SectionList
-            sections={Object.keys(sortedWorkpapers).map((key) => ({
+            sections={Object.keys(sortedPapers).map((key) => ({
               title: key,
-              data: sortedWorkpapers[key],
-            }))}
+              data: sortedPapers[key],
+            })).sort((a, b) => a.data[0].endedAt.valueOf() - b.data[0].endedAt.valueOf())}
             keyExtractor={(paper): string => paper.paperTitle}
-            // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-            renderSectionHeader={({ section: { title } }) => <LeftDate>{title}</LeftDate>}
+            renderSectionHeader={
+              ({ section: { title } }): JSX.Element => <LeftDate>{title}</LeftDate>
+            }
             refreshing={refreshing}
             onRefresh={(): void => setRefreshing(true)}
-            // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-            renderItem={({ item: paper }) => (
+            renderItem={({ item: paper }): JSX.Element => (
               <TouchableNativeFeedback
                 key={paper.paperTitle}
                 onPress={(): void => {
@@ -125,7 +125,7 @@ export default (): JSX.Element => {
             <PandaWrapper>
               <Panda />
             </PandaWrapper>
-            <NoWorkpaper>과제가 없어요!</NoWorkpaper>
+            <NoPaper>과제가 없어요!</NoPaper>
           </EmptyWrapper>
         )}
       </PageWithTitle>
@@ -133,9 +133,9 @@ export default (): JSX.Element => {
         snapPoints={[screenHeight, 0]}
         initialSnap={1}
         ref={bottomSheetRef}
-        onOpenStart={() => setIsModalOpened(() => true)}
-        onCloseEnd={() => setIsModalOpened(() => false)}
-        renderContent={() => (
+        onOpenStart={(): void => setIsModalOpened(() => true)}
+        onCloseEnd={(): void => setIsModalOpened(() => false)}
+        renderContent={(): JSX.Element => (
           <BottomSheetWrapper>
             <DownloadModal paper={selectedPaper} />
           </BottomSheetWrapper>

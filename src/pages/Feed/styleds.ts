@@ -1,5 +1,4 @@
 import styled from '@emotion/native';
-import PageWithTitle from 'templetes/PageWithTitle';
 
 export const PaperWrapper = styled.View`
   background-color: white;
@@ -58,7 +57,7 @@ export const QuestionQuantityBadge = styled.Text`
   text-align-vertical: center;
 `;
 
-export const NoWorkpaper = styled.Text`
+export const NoPaper = styled.Text`
   font-family: 'NotoSansCJKkr-Black';
   opacity: 0.7;
 `;
