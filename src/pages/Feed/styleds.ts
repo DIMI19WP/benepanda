@@ -1,4 +1,5 @@
 import styled from '@emotion/native';
+import Pdf from 'react-native-pdf';
 
 export const PaperWrapper = styled.View`
   background-color: white;
@@ -79,7 +80,6 @@ export const PaperListWrapper = styled.View`
 `;
 export const BottomSheetContentWrapper = styled.View`
   width: 100%;
-  height: 300px;
   background-color: white;
   bottom: 0;
   position: absolute;
@@ -90,4 +90,45 @@ export const BottomSheetContentWrapper = styled.View`
 export const BottomSheetWrapper = styled.View`
   background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
+`;
+export const PositiveButtonWrapper = styled.View`
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #90CC69;
+    elevation: 1;
+    margin-top: 3px;
+`;
+export const PositiveButton = styled.Text`
+    text-align: center;
+    color: white;
+`;
+export const PDFLoader = styled(Pdf)`
+    width: 400px;
+    height: 400px;
+    margin-bottom: 6px;
+`;
+export const Horizontal = styled.View`
+    flex-direction: row;
+`;
+
+export const DownloadConfig = styled.View`
+  flex: 1;
+  padding: 12px;
+`;
+
+export const ConfigWrapper = styled(Horizontal)`
+    padding: 6px;
+`;
+export const ConfigKey = styled.Text`
+    font-family: 'NotoSansCJKkr-Black';
+    text-align-vertical: center;
+    font-size: 12px;
+    flex: 0.3;
+    margin-right: 6px;
+`;
+export const ConfigValue = styled.TextInput`
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 6px;
+    flex: 1;
 `;

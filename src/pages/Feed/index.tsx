@@ -133,11 +133,12 @@ export default (): JSX.Element => {
         snapPoints={[screenHeight, 0]}
         initialSnap={1}
         ref={bottomSheetRef}
+        enabledContentGestureInteraction
         onOpenStart={(): void => setIsModalOpened(() => true)}
         onCloseEnd={(): void => setIsModalOpened(() => false)}
         renderContent={(): JSX.Element => (
           <BottomSheetWrapper>
-            <DownloadModal paper={selectedPaper} />
+            {selectedPaper && <DownloadModal paper={selectedPaper} />}
           </BottomSheetWrapper>
         )}
       />

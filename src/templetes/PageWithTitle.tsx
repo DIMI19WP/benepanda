@@ -6,7 +6,7 @@ const Title = styled.Text`
   font-family: 'NotoSansCJKkr-Black';
 `;
 
-const Background = styled.View`
+const Background = styled.KeyboardAvoidingView`
   background-color: #F6F8FA;
   min-height: 100%;
   padding: 12px 24px 0px 24px;  
@@ -16,7 +16,7 @@ const Background = styled.View`
 
 export default ({ titleText, children, ...params }:
   { titleText: string; children: ReactNode}): JSX.Element => (
-    <Background {...params}>
+    <Background behavior="position" {...params}>
       <Title>{titleText}</Title>
       <>{children}</>
     </Background>

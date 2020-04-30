@@ -14,3 +14,27 @@ export type Paper = {
     paperId: string;
     rightQuantity?: number;
 }
+
+export type Question = {
+    Table01: {
+        QST_ID: number;
+        QST_HTML: string;
+        QST_CMT_HTML: string;
+        EXE_HTML: string;
+        EXE_CMT_HTML: string;
+        EXE_RANGE: string;
+        QST_CORRECT: string;
+        QST_CORR_RATE?: string;
+     }[];
+    Table02: [
+        {
+            IBT_ID: number;
+            IBT_TYPE: string;
+            IBT_NAME: string;
+            SBJ_CODE: string;
+            SBJ_NAME: Subject;
+        }
+    ];
+    UserName: string;
+    IBT_PRINT_TYPE: string;
+}
