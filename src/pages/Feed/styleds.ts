@@ -91,17 +91,6 @@ export const BottomSheetWrapper = styled.View`
   background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
 `;
-export const PositiveButtonWrapper = styled.View`
-    border-radius: 12px;
-    padding: 12px;
-    background-color: #90CC69;
-    elevation: 1;
-    margin-top: 3px;
-`;
-export const PositiveButton = styled.Text`
-    text-align: center;
-    color: white;
-`;
 export const PDFLoader = styled(Pdf)`
     width: 400px;
     height: 400px;
