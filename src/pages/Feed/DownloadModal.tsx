@@ -38,7 +38,8 @@ export default ({ paper }: {paper?: {
             <ConfigKey>글자 크기</ConfigKey>
             <ConfigValue keyboardType="number-pad" />
           </ConfigWrapper>
-          <Horizontal style={{ width: '70%' }}>
+          <Horizontal>
+            <View style={{ flex: 1 }} />
             <Button
               style={{
                 marginRight: 6,

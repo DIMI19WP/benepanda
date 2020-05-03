@@ -21,6 +21,7 @@
     "@types/fast-html-parser": "^1.0.0",
     "@types/jsdom": "^16.2.1",
     "@types/react-native-orientation": "^5.0.1",
+    "@types/react-native-vector-icons": "^6.4.5",
     "@types/tough-cookie": "^4.0.0",
     "axios": "^0.19.2",
     "axios-cookiejar-support": "^1.0.0",

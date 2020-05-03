@@ -10,4 +10,5 @@ export const PositiveButtonWrapper = styled.View`
 export const PositiveButton = styled.Text`
     text-align: center;
     flex: 1;
+    color: #90CC69;
 `;

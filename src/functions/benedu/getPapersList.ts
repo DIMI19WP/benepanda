@@ -6,15 +6,15 @@ import Moment from 'moment';
 // import { ROOT_URI } from 'types/constants';
 
 export default async (): Promise<Paper[]> => {
-  // const fetched = await api('/StudentStudy/TaskListList');
-  const fetched = {
+  const fetched = await api('/StudentStudy/TaskListList');
+  /* const fetched = {
     value: `
 
 
   <table id="TaskList-table">
       <tbody>
           <tr value="vRwsRt5aE9frMfuQz6qJ5A{e}{e}" sts="qlsPgUs{s}pzrJXatST3V3RA{e}{e}" class="  complete  ">
-  
+
               <td class="center" name="check">
                   <label class="pos-rel">
                       <input type="checkbox" class="ace" />
@@ -26,12 +26,12 @@ export default async (): Promise<Paper[]> => {
               <td class="center">함지연</td>
               <td>2020년 4월 디미고 모의고사 1학년 국어</td>
               <td class="center">45</td>
-              
+
               <td class="center">응시완료</td>
               <td class="center">45</td>
               <td class="center">37</td>
               <td class="center">2020-04-09</td>
-  
+
               <td class="center">76:46</td>
               <td class="center">2020-04-09 09:30</td>
               <td class="center">2020-04-30 10:50</td>
@@ -39,7 +39,7 @@ export default async (): Promise<Paper[]> => {
       </tbody>
   </table>
   `,
-  };
+  }; */
   const DOM = HTMLParser.parse(fetched.value);
   return DOM.querySelectorAll('#TaskList-table tbody tr').map((paper) => {
     const [, , , ,,
