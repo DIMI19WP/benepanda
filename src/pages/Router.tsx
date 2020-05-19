@@ -4,7 +4,7 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 
-import loginWithBenedu from '~/functions/benedu/login';
+import loginWithBenedu from 'functions/benedu/login';
 import Feed from './Feed';
 import SignIn from './SignIn';
 

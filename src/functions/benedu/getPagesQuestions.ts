@@ -1,17 +1,12 @@
 import api from 'functions/request';
-import getTestDetail from 'functions/benedu/getPaperPageIds';
 import { Question } from 'types/paper';
 
 export default async (paperId: string): Promise<string> => {
-  const pageIds = await getTestDetail(paperId);
-
   const formdata = new FormData();
   formdata.append('type', 'ymWuGYYSOfmJLRPkt3xlfw{e}{e}');
-  pageIds.forEach((pageId, index) => {
-    formdata.append(`values[${index}][value]`, paperId);
-    formdata.append(`values[${index}][detailvalue]`, pageId);
-  });
-  const fetched = await api('/Utils/TestDetailPrint', {
+  formdata.append('values[]', paperId);
+  formdata.append('type', 'ymWuGYYSOfmJLRPkt3xlfw{e}{e}');
+  const fetched = await api('/Utils/TestPrint', {
     method: 'POST',
     body: formdata,
   });

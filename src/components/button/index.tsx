@@ -3,7 +3,9 @@ import {
   View, TouchableNativeFeedback, StyleProp, ViewStyle,
 } from 'react-native';
 
-import { PositiveButtonWrapper, PositiveButton } from './styleds';
+import {
+  Button, ButtonText,
+} from './styleds';
 
 export default ({ onPress, children, style }: {
     children: string;
@@ -11,12 +13,12 @@ export default ({ onPress, children, style }: {
     style?: StyleProp<ViewStyle>;
 }): JSX.Element => (
   <View style={[style]}>
-    <TouchableNativeFeedback onPress={onPress}>
-      <PositiveButtonWrapper>
-        <PositiveButton>
+    <Button>
+      <TouchableNativeFeedback onPress={onPress}>
+        <ButtonText>
           {children}
-        </PositiveButton>
-      </PositiveButtonWrapper>
-    </TouchableNativeFeedback>
+        </ButtonText>
+      </TouchableNativeFeedback>
+    </Button>
   </View>
 );

@@ -4,6 +4,7 @@ import RNFS from 'react-native-fs';
 import FileViewer from 'react-native-file-viewer';
 
 import Button from 'components/button';
+import { getPagesQuestions } from 'functions/benedu';
 import {
   BottomSheetContentWrapper, PaperTitle,
   PDFLoader, Horizontal, DownloadConfig, ConfigWrapper, ConfigKey, ConfigValue,
@@ -17,6 +18,7 @@ export default ({ paper }: {paper?: {
   useEffect(() => {
     (async (): Promise<void> => {
       if (!paper) return;
+      console.log(await getPagesQuestions(paper.paperId));
       setPdfUri('https://rycont.imfast.io/%EA%B5%90%EA%B3%BC%EC%84%9C/%EC%88%98%ED%95%99%28%EC%83%81%29%20-%20%EC%9D%B4%EC%A4%80%EC%97%B4.pdf');
     })();
   }, []);
@@ -28,7 +30,7 @@ export default ({ paper }: {paper?: {
         <PDFLoader
           source={{ uri: pdfUri }}
         />
-        <DownloadConfig style={{ flex: 1, flexWrap: 'wrap-reverse' }}>
+        <DownloadConfig>
           <View style={{ flex: 1 }} />
           <ConfigWrapper>
             <ConfigKey>글꼴</ConfigKey>
@@ -38,7 +40,7 @@ export default ({ paper }: {paper?: {
             <ConfigKey>글자 크기</ConfigKey>
             <ConfigValue keyboardType="number-pad" />
           </ConfigWrapper>
-          <Horizontal>
+          <Horizontal style={{ paddingRight: 6 }}>
             <View style={{ flex: 1 }} />
             <Button
               style={{

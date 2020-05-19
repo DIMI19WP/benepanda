@@ -1,14 +1,13 @@
 import styled from '@emotion/native';
 
-export const PositiveButtonWrapper = styled.View`
+export const Button = styled.View`
+    background-color: #83b439;
     border-radius: 12px;
-    padding: 6px;
-    margin-top: 3px;
-    flex: 1;
-    border: 1px solid #90CC69;
+    overflow: hidden;
+    padding: 8px 12px 8px 12px;
 `;
-export const PositiveButton = styled.Text`
+
+export const ButtonText = styled.Text`
+    color: white;
     text-align: center;
-    flex: 1;
-    color: #90CC69;
 `;
