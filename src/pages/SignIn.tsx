@@ -19,12 +19,13 @@ const Container = styled.KeyboardAvoidingView`
 
 const BGFitter = styled.View`
     position: absolute;
-    left: -91.77px;
+    /* left: -91.77px; */
     bottom: 0px;
     z-index: -100;
     flex: 1;
     justify-items: self-end;
     transition: 1s;
+    width: 100%;
 `;
 
 const LogoWrapper = styled.View`
@@ -78,7 +79,6 @@ font-family: 'NotoSansCJKkr-Black';
 const PandaWithBee = styled.Image`
 height: 300px;
 ${({ screenHeight }) => {
-    console.log(screenHeight);
     if (screenHeight < 672) {
       return `
         height: 170px;
@@ -137,13 +137,15 @@ const LoginBlock = ({ navigation }: Navigation) => {
 };
 
 export default ({ navigation }: Navigation): JSX.Element => {
-  const [isHorizontal, setIsHorizontal] = useState(Orientation.getInitialOrientation() === 'LANDSCAPE');
+//   const [isHorizontal, setIsHorizontal] = useState(false);
+  const screenSize = Dimensions.get('window');
+  const isHorizontal = screenSize.width > screenSize.height;
   useEffect(() => {
-    const orientationSetter = (orientation: Orientation.orientation): boolean => setIsHorizontal(orientation === 'LANDSCAPE');
-    Orientation.addOrientationListener(orientationSetter);
-    return (): void => {
-      Orientation.removeOrientationListener(orientationSetter);
-    };
+    // const orientationSetter = (orientation: Orientation.orientation): boolean => setIsHorizontal(orientation === 'LANDSCAPE');
+    // Orientation.addOrientationListener(orientationSetter);
+    // return (): void => {
+    //   Orientation.removeOrientationListener(orientationSetter);
+    // };
   }, []);
 
   if (isHorizontal) {
@@ -166,7 +168,7 @@ export default ({ navigation }: Navigation): JSX.Element => {
       </ContentWrapper>
       <BGFitter>
         <View style={{ flex: 1 }} />
-        <Background />
+        <Background width={`${screenSize.width}px`} />
       </BGFitter>
     </Container>
   );

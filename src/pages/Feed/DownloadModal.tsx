@@ -3,8 +3,10 @@ import { View, ToastAndroid } from 'react-native';
 import RNFS from 'react-native-fs';
 import FileViewer from 'react-native-file-viewer';
 
+import RNFetchBlob from 'rn-fetch-blob';
 import Button from 'components/button';
-import { getPagesQuestions } from 'functions/benedu';
+import { getPrintablePaper, getRenderedPDFUri } from 'functions/benedu';
+import { Paper } from 'types/paper';
 import {
   BottomSheetContentWrapper, PaperTitle,
   PDFLoader, Horizontal, DownloadConfig, ConfigWrapper, ConfigKey, ConfigValue,
@@ -17,11 +19,13 @@ export default ({ paper }: {paper?: {
   const [pdfUri, setPdfUri] = useState<string>();
   useEffect(() => {
     (async (): Promise<void> => {
-      if (!paper) return;
-      console.log(await getPagesQuestions(paper.paperId));
-      setPdfUri('https://rycont.imfast.io/%EA%B5%90%EA%B3%BC%EC%84%9C/%EC%88%98%ED%95%99%28%EC%83%81%29%20-%20%EC%9D%B4%EC%A4%80%EC%97%B4.pdf');
+      console.log(pdfUri);
+      setPdfUri(`http://192.168.35.76:8080/${(await getRenderedPDFUri(paper.paperId)).substr(2)}`);
     })();
-  }, []);
+    return () => {
+      setPdfUri(undefined);
+    };
+  }, [paper?.paperId]);
   if (!paper) return <></>;
   return (
     <BottomSheetContentWrapper>
@@ -48,19 +52,20 @@ export default ({ paper }: {paper?: {
               }}
               onPress={(): void => {
                 if (!pdfUri) return;
+                const downloadPath = `${RNFS.DocumentDirectoryPath}/${paper.title}.pdf`;
                 RNFS.downloadFile({
-                  toFile: `${RNFS.DocumentDirectoryPath}/temp.pdf`,
+                  toFile: downloadPath,
                   fromUrl: pdfUri,
-                }).promise.then(() => FileViewer.open(`${RNFS.DocumentDirectoryPath}/temp.pdf`));
+                }).promise.then(() => FileViewer.open(downloadPath));
               }}
             >
               열기
             </Button>
             <Button onPress={(): void => {
-              if (!pdfUri) return;
+              if (!printableData) return;
               RNFS.downloadFile({
                 toFile: `${RNFS.DocumentDirectoryPath}/${paper.title}.pdf`,
-                fromUrl: pdfUri,
+                fromUrl: printableData,
               }).promise.then(() => ToastAndroid.show(`"${RNFS.DocumentDirectoryPath}/${paper.title}.pdf"에 저장되었습니다.`, ToastAndroid.LONG));
             }}
             >

@@ -1,27 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  Text, TouchableNativeFeedback, SectionList, Dimensions, BackHandler,
+  Text, TouchableNativeFeedback, SectionList, Dimensions, BackHandler, Image,
 } from 'react-native';
 import BottomSheet from 'reanimated-bottom-sheet';
-import Orientation from 'react-native-orientation';
 import moment from 'moment';
 import 'moment/locale/ko';
 
 import PageWithTitle from 'templetes/PageWithTitle';
-import { Paper } from 'types/paper';
+import { BriefPaper } from 'types/paper';
 import getPapers from 'functions/benedu/getPapersList';
-import Panda from 'assets/panda.svg';
 import {
   EmptyWrapper, InfoKey, PaperWrapper, PaperTitle, InfoWrapper,
   LeftDate, NoPaper, PandaWrapper, PaperMainInfo, QuestionQuantityBadge,
-  BottomSheetWrapper,
+  BottomSheetWrapper, Panda,
 } from './styleds';
 import DownloadModal from './DownloadModal';
 
 export default (): JSX.Element => {
-  const [papers, setPapers] = useState<Paper[] | null>(null);
+  const [papers, setPapers] = useState<BriefPaper[] | null>(null);
   const [refreshing, setRefreshing] = useState(false);
-  const [screenHeight, setScreenHeight] = useState(Dimensions.get('window').height);
+  const [screenHeight] = useState(Dimensions.get('window').height);
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [selectedPaper, selectPaper] = useState<{
     title: string;
@@ -30,7 +28,7 @@ export default (): JSX.Element => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const bottomSheetRef = useRef<any>();
   const sortedPapers = papers?.reduce((acc: {
-    [key: string]: Paper[];
+    [key: string]: BriefPaper[];
   }, paper) => {
     const key = paper.endedAt.fromNow();
     if (acc[key]) acc[key] = [...acc[key], paper];
@@ -42,13 +40,9 @@ export default (): JSX.Element => {
     (async (): Promise<void> => {
       setPapers(await getPapers());
     })();
-    function orientListener(): void {
-      setScreenHeight(Dimensions.get('window').height);
-    }
-    Orientation.addOrientationListener(orientListener);
-    return (): void => Orientation.removeOrientationListener(orientListener);
   }, []);
   useEffect(() => {
+    console.log(screenHeight);
     function closeModal(): boolean {
       if (isModalOpened) {
         bottomSheetRef.current.snapTo(1);
@@ -122,9 +116,7 @@ export default (): JSX.Element => {
           )
         ) : (
           <EmptyWrapper>
-            <PandaWrapper>
-              <Panda />
-            </PandaWrapper>
+            <Panda resizeMode="center" source={require('assets/panda.png')} />
             <NoPaper>과제가 없어요!</NoPaper>
           </EmptyWrapper>
         )}

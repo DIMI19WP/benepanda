@@ -1,3 +1,5 @@
-import _getPagesQuestions from './getPagesQuestions';
+import _getPrintablePaper from './getPrintablePaper';
+import _getRenderedPDFUri from './getRenderedPDFUri';
 
-export const getPagesQuestions = _getPagesQuestions;
+export const getPrintablePaper = _getPrintablePaper;
+export const getRenderedPDFUri = _getRenderedPDFUri;
