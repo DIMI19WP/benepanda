@@ -18,8 +18,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* benepandaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* benepandaTests.m */; };
 		2E8DC8045CC0E6F62343622E /* libPods-benepanda-benepandaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C8E7D76244B8159C5C5FDC /* libPods-benepanda-benepandaTests.a */; };
-		5B5DA9A1247D5E9C00B0BB50 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5DA9A0247D5E9C00B0BB50 /* NotoSansCJKkr-Black.otf */; };
-		5B5DA9A4247D628A00B0BB50 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5DA9A2247D622600B0BB50 /* MaterialIcons.ttf */; };
+		5B5DA9A5247D63EF00B0BB50 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5DA9A0247D5E9C00B0BB50 /* NotoSansCJKkr-Black.otf */; };
 		E8484E15B8ED5C26A233E41F /* libPods-benepanda-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6C2E060920A192BE4A86C9 /* libPods-benepanda-tvOSTests.a */; };
 		FFBEC2E879374C198B5FAAD9 /* libPods-benepanda-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7A9461D6960C5B7E12B16E /* libPods-benepanda-tvOS.a */; };
 /* End PBXBuildFile section */
@@ -345,10 +344,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B5DA9A4247D628A00B0BB50 /* MaterialIcons.ttf in Resources */,
+				5B5DA9A5247D63EF00B0BB50 /* NotoSansCJKkr-Black.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				5B5DA9A1247D5E9C00B0BB50 /* NotoSansCJKkr-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +749,7 @@
 				PRODUCT_NAME = benepanda;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -772,6 +771,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = benepanda;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
