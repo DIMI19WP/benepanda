@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* benepandaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* benepandaTests.m */; };
+		00E356F31AD99517003FC87E /* BenepandaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BenepandaTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1C1308EE214658008B0C7CE5 /* libPods-benepanda.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28127C4ED1F4FD027511D6E2 /* libPods-benepanda.a */; };
+		1C1308EE214658008B0C7CE5 /* libPods-Benepanda.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28127C4ED1F4FD027511D6E2 /* libPods-Benepanda.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* benepandaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* benepandaTests.m */; };
-		2E8DC8045CC0E6F62343622E /* libPods-benepanda-benepandaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C8E7D76244B8159C5C5FDC /* libPods-benepanda-benepandaTests.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* BenepandaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BenepandaTests.m */; };
+		2E8DC8045CC0E6F62343622E /* libPods-Benepanda-BenepandaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C8E7D76244B8159C5C5FDC /* libPods-Benepanda-BenepandaTests.a */; };
 		5B5DA9A5247D63EF00B0BB50 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5DA9A0247D5E9C00B0BB50 /* NotoSansCJKkr-Black.otf */; };
-		E8484E15B8ED5C26A233E41F /* libPods-benepanda-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6C2E060920A192BE4A86C9 /* libPods-benepanda-tvOSTests.a */; };
-		FFBEC2E879374C198B5FAAD9 /* libPods-benepanda-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7A9461D6960C5B7E12B16E /* libPods-benepanda-tvOS.a */; };
+		E8484E15B8ED5C26A233E41F /* libPods-Benepanda-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6C2E060920A192BE4A86C9 /* libPods-Benepanda-tvOSTests.a */; };
+		FFBEC2E879374C198B5FAAD9 /* libPods-Benepanda-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7A9461D6960C5B7E12B16E /* libPods-Benepanda-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,45 +29,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = benepanda;
+			remoteInfo = Benepanda;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "benepanda-tvOS";
+			remoteInfo = "Benepanda-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* benepandaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = benepandaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* BenepandaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenepandaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* benepandaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = benepandaTests.m; sourceTree = "<group>"; };
-		0D6C2E060920A192BE4A86C9 /* libPods-benepanda-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-benepanda-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* benepanda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = benepanda.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = benepanda/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = benepanda/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* BenepandaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BenepandaTests.m; sourceTree = "<group>"; };
+		0D6C2E060920A192BE4A86C9 /* libPods-Benepanda-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Benepanda-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Benepanda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benepanda.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Benepanda/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Benepanda/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = benepanda/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = benepanda/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = benepanda/main.m; sourceTree = "<group>"; };
-		1E7A9461D6960C5B7E12B16E /* libPods-benepanda-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-benepanda-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		28127C4ED1F4FD027511D6E2 /* libPods-benepanda.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-benepanda.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* benepanda-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "benepanda-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* benepanda-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "benepanda-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F1429441556174AF1703E90 /* Pods-benepanda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benepanda.debug.xcconfig"; path = "Target Support Files/Pods-benepanda/Pods-benepanda.debug.xcconfig"; sourceTree = "<group>"; };
-		39C8E7D76244B8159C5C5FDC /* libPods-benepanda-benepandaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-benepanda-benepandaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5690BB778C88CF39990E7612 /* Pods-benepanda-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benepanda-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-benepanda-tvOSTests/Pods-benepanda-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Benepanda/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Benepanda/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Benepanda/main.m; sourceTree = "<group>"; };
+		1E7A9461D6960C5B7E12B16E /* libPods-Benepanda-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Benepanda-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28127C4ED1F4FD027511D6E2 /* libPods-Benepanda.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Benepanda.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* Benepanda-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Benepanda-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Benepanda-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Benepanda-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F1429441556174AF1703E90 /* Pods-Benepanda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benepanda.debug.xcconfig"; path = "Target Support Files/Pods-Benepanda/Pods-Benepanda.debug.xcconfig"; sourceTree = "<group>"; };
+		39C8E7D76244B8159C5C5FDC /* libPods-Benepanda-BenepandaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Benepanda-BenepandaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5690BB778C88CF39990E7612 /* Pods-Benepanda-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benepanda-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Benepanda-tvOSTests/Pods-Benepanda-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B5DA9A0247D5E9C00B0BB50 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Black.otf"; path = "Fonts/NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
 		5B5DA9A2247D622600B0BB50 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		5C824B78C058423A5C4E19F9 /* Pods-benepanda-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benepanda-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-benepanda-tvOSTests/Pods-benepanda-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		74640D2EE9B438E8A39BFABC /* Pods-benepanda-benepandaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benepanda-benepandaTests.debug.xcconfig"; path = "Target Support Files/Pods-benepanda-benepandaTests/Pods-benepanda-benepandaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		83877CCC40F1DBF81C90B1DF /* Pods-benepanda-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benepanda-tvOS.release.xcconfig"; path = "Target Support Files/Pods-benepanda-tvOS/Pods-benepanda-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		888811E3DA75E7932EC90148 /* Pods-benepanda-benepandaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benepanda-benepandaTests.release.xcconfig"; path = "Target Support Files/Pods-benepanda-benepandaTests/Pods-benepanda-benepandaTests.release.xcconfig"; sourceTree = "<group>"; };
-		9E9E1CE5749C2A02302E8E33 /* Pods-benepanda-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benepanda-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-benepanda-tvOS/Pods-benepanda-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		CCB6201908568CFD4409DF5C /* Pods-benepanda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benepanda.release.xcconfig"; path = "Target Support Files/Pods-benepanda/Pods-benepanda.release.xcconfig"; sourceTree = "<group>"; };
+		5C824B78C058423A5C4E19F9 /* Pods-Benepanda-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benepanda-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Benepanda-tvOSTests/Pods-Benepanda-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		74640D2EE9B438E8A39BFABC /* Pods-Benepanda-BenepandaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benepanda-BenepandaTests.debug.xcconfig"; path = "Target Support Files/Pods-Benepanda-BenepandaTests/Pods-Benepanda-BenepandaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		83877CCC40F1DBF81C90B1DF /* Pods-Benepanda-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benepanda-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Benepanda-tvOS/Pods-Benepanda-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		888811E3DA75E7932EC90148 /* Pods-Benepanda-BenepandaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benepanda-BenepandaTests.release.xcconfig"; path = "Target Support Files/Pods-Benepanda-BenepandaTests/Pods-Benepanda-BenepandaTests.release.xcconfig"; sourceTree = "<group>"; };
+		9E9E1CE5749C2A02302E8E33 /* Pods-Benepanda-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benepanda-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Benepanda-tvOS/Pods-Benepanda-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CCB6201908568CFD4409DF5C /* Pods-Benepanda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benepanda.release.xcconfig"; path = "Target Support Files/Pods-Benepanda/Pods-Benepanda.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8DC8045CC0E6F62343622E /* libPods-benepanda-benepandaTests.a in Frameworks */,
+				2E8DC8045CC0E6F62343622E /* libPods-Benepanda-BenepandaTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C1308EE214658008B0C7CE5 /* libPods-benepanda.a in Frameworks */,
+				1C1308EE214658008B0C7CE5 /* libPods-Benepanda.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFBEC2E879374C198B5FAAD9 /* libPods-benepanda-tvOS.a in Frameworks */,
+				FFBEC2E879374C198B5FAAD9 /* libPods-Benepanda-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,20 +101,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8484E15B8ED5C26A233E41F /* libPods-benepanda-tvOSTests.a in Frameworks */,
+				E8484E15B8ED5C26A233E41F /* libPods-Benepanda-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* benepandaTests */ = {
+		00E356EF1AD99517003FC87E /* BenepandaTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* benepandaTests.m */,
+				00E356F21AD99517003FC87E /* BenepandaTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = benepandaTests;
+			path = BenepandaTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -125,7 +125,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* benepanda */ = {
+		13B07FAE1A68108700A75B9A /* Benepanda */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -136,7 +136,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = benepanda;
+			name = Benepanda;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -144,10 +144,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				28127C4ED1F4FD027511D6E2 /* libPods-benepanda.a */,
-				39C8E7D76244B8159C5C5FDC /* libPods-benepanda-benepandaTests.a */,
-				1E7A9461D6960C5B7E12B16E /* libPods-benepanda-tvOS.a */,
-				0D6C2E060920A192BE4A86C9 /* libPods-benepanda-tvOSTests.a */,
+				28127C4ED1F4FD027511D6E2 /* libPods-Benepanda.a */,
+				39C8E7D76244B8159C5C5FDC /* libPods-Benepanda-BenepandaTests.a */,
+				1E7A9461D6960C5B7E12B16E /* libPods-Benepanda-tvOS.a */,
+				0D6C2E060920A192BE4A86C9 /* libPods-Benepanda-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,9 +164,9 @@
 			children = (
 				5B5DA9A2247D622600B0BB50 /* MaterialIcons.ttf */,
 				5B5DA9A0247D5E9C00B0BB50 /* NotoSansCJKkr-Black.otf */,
-				13B07FAE1A68108700A75B9A /* benepanda */,
+				13B07FAE1A68108700A75B9A /* Benepanda */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* benepandaTests */,
+				00E356EF1AD99517003FC87E /* BenepandaTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BE377176C731EEF6DD3FD056 /* Pods */,
@@ -179,10 +179,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* benepanda.app */,
-				00E356EE1AD99517003FC87E /* benepandaTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* benepanda-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* benepanda-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Benepanda.app */,
+				00E356EE1AD99517003FC87E /* BenepandaTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Benepanda-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Benepanda-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,14 +190,14 @@
 		BE377176C731EEF6DD3FD056 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2F1429441556174AF1703E90 /* Pods-benepanda.debug.xcconfig */,
-				CCB6201908568CFD4409DF5C /* Pods-benepanda.release.xcconfig */,
-				74640D2EE9B438E8A39BFABC /* Pods-benepanda-benepandaTests.debug.xcconfig */,
-				888811E3DA75E7932EC90148 /* Pods-benepanda-benepandaTests.release.xcconfig */,
-				9E9E1CE5749C2A02302E8E33 /* Pods-benepanda-tvOS.debug.xcconfig */,
-				83877CCC40F1DBF81C90B1DF /* Pods-benepanda-tvOS.release.xcconfig */,
-				5690BB778C88CF39990E7612 /* Pods-benepanda-tvOSTests.debug.xcconfig */,
-				5C824B78C058423A5C4E19F9 /* Pods-benepanda-tvOSTests.release.xcconfig */,
+				2F1429441556174AF1703E90 /* Pods-Benepanda.debug.xcconfig */,
+				CCB6201908568CFD4409DF5C /* Pods-Benepanda.release.xcconfig */,
+				74640D2EE9B438E8A39BFABC /* Pods-Benepanda-BenepandaTests.debug.xcconfig */,
+				888811E3DA75E7932EC90148 /* Pods-Benepanda-BenepandaTests.release.xcconfig */,
+				9E9E1CE5749C2A02302E8E33 /* Pods-Benepanda-tvOS.debug.xcconfig */,
+				83877CCC40F1DBF81C90B1DF /* Pods-Benepanda-tvOS.release.xcconfig */,
+				5690BB778C88CF39990E7612 /* Pods-Benepanda-tvOSTests.debug.xcconfig */,
+				5C824B78C058423A5C4E19F9 /* Pods-Benepanda-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -205,9 +205,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* benepandaTests */ = {
+		00E356ED1AD99517003FC87E /* BenepandaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "benepandaTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BenepandaTests" */;
 			buildPhases = (
 				9CE09EEE45DC64020422E994 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -220,14 +220,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = benepandaTests;
-			productName = benepandaTests;
-			productReference = 00E356EE1AD99517003FC87E /* benepandaTests.xctest */;
+			name = BenepandaTests;
+			productName = BenepandaTests;
+			productReference = 00E356EE1AD99517003FC87E /* BenepandaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* benepanda */ = {
+		13B07F861A680F5B00A75B9A /* Benepanda */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "benepanda" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Benepanda" */;
 			buildPhases = (
 				6D05F2889D699137098F0571 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -241,14 +241,14 @@
 			);
 			dependencies = (
 			);
-			name = benepanda;
-			productName = benepanda;
-			productReference = 13B07F961A680F5B00A75B9A /* benepanda.app */;
+			name = Benepanda;
+			productName = Benepanda;
+			productReference = 13B07F961A680F5B00A75B9A /* Benepanda.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* benepanda-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* Benepanda-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "benepanda-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Benepanda-tvOS" */;
 			buildPhases = (
 				E6C1A48A371F089EC6C67B63 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -261,14 +261,14 @@
 			);
 			dependencies = (
 			);
-			name = "benepanda-tvOS";
-			productName = "benepanda-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* benepanda-tvOS.app */;
+			name = "Benepanda-tvOS";
+			productName = "Benepanda-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Benepanda-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* benepanda-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* Benepanda-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "benepanda-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Benepanda-tvOSTests" */;
 			buildPhases = (
 				2A39E30171C8312D5F2EF3E8 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -280,9 +280,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "benepanda-tvOSTests";
-			productName = "benepanda-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* benepanda-tvOSTests.xctest */;
+			name = "Benepanda-tvOSTests";
+			productName = "Benepanda-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Benepanda-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -311,7 +311,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "benepanda" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Benepanda" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -324,10 +324,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* benepanda */,
-				00E356ED1AD99517003FC87E /* benepandaTests */,
-				2D02E47A1E0B4A5D006451C7 /* benepanda-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* benepanda-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* Benepanda */,
+				00E356ED1AD99517003FC87E /* BenepandaTests */,
+				2D02E47A1E0B4A5D006451C7 /* Benepanda-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Benepanda-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -388,7 +388,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-benepanda-benepandaTests/Pods-benepanda-benepandaTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Benepanda-BenepandaTests/Pods-Benepanda-BenepandaTests-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -427,7 +427,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-benepanda-benepandaTests/Pods-benepanda-benepandaTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Benepanda-BenepandaTests/Pods-Benepanda-BenepandaTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2A39E30171C8312D5F2EF3E8 /* [CP] Check Pods Manifest.lock */ = {
@@ -445,7 +445,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-benepanda-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Benepanda-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -472,7 +472,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-benepanda/Pods-benepanda-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Benepanda/Pods-Benepanda-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -511,7 +511,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-benepanda/Pods-benepanda-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Benepanda/Pods-Benepanda-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6D05F2889D699137098F0571 /* [CP] Check Pods Manifest.lock */ = {
@@ -529,7 +529,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-benepanda-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Benepanda-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -551,7 +551,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-benepanda-benepandaTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Benepanda-BenepandaTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -573,7 +573,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-benepanda-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Benepanda-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -625,7 +625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* benepandaTests.m in Sources */,
+				00E356F31AD99517003FC87E /* BenepandaTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,7 +651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* benepandaTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* BenepandaTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,12 +660,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* benepanda */;
+			target = 13B07F861A680F5B00A75B9A /* Benepanda */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* benepanda-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* Benepanda-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -677,7 +677,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = benepanda;
+			path = Benepanda;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -685,14 +685,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74640D2EE9B438E8A39BFABC /* Pods-benepanda-benepandaTests.debug.xcconfig */;
+			baseConfigurationReference = 74640D2EE9B438E8A39BFABC /* Pods-Benepanda-BenepandaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = benepandaTests/Info.plist;
+				INFOPLIST_FILE = BenepandaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -702,17 +702,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/benepanda.app/benepanda";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Benepanda.app/Benepanda";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 888811E3DA75E7932EC90148 /* Pods-benepanda-benepandaTests.release.xcconfig */;
+			baseConfigurationReference = 888811E3DA75E7932EC90148 /* Pods-Benepanda-BenepandaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = benepandaTests/Info.plist;
+				INFOPLIST_FILE = BenepandaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -722,13 +722,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/benepanda.app/benepanda";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Benepanda.app/Benepanda";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F1429441556174AF1703E90 /* Pods-benepanda.debug.xcconfig */;
+			baseConfigurationReference = 2F1429441556174AF1703E90 /* Pods-Benepanda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -738,7 +738,7 @@
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = benepanda/Info.plist;
+				INFOPLIST_FILE = Benepanda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -746,7 +746,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = benepanda;
+				PRODUCT_NAME = Benepanda;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -756,12 +756,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCB6201908568CFD4409DF5C /* Pods-benepanda.release.xcconfig */;
+			baseConfigurationReference = CCB6201908568CFD4409DF5C /* Pods-Benepanda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = benepanda/Info.plist;
+				INFOPLIST_FILE = Benepanda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -769,7 +769,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = benepanda;
+				PRODUCT_NAME = Benepanda;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -778,7 +778,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E9E1CE5749C2A02302E8E33 /* Pods-benepanda-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 9E9E1CE5749C2A02302E8E33 /* Pods-Benepanda-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -789,14 +789,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "benepanda-tvOS/Info.plist";
+				INFOPLIST_FILE = "Benepanda-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.benepanda-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Benepanda-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -806,7 +806,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83877CCC40F1DBF81C90B1DF /* Pods-benepanda-tvOS.release.xcconfig */;
+			baseConfigurationReference = 83877CCC40F1DBF81C90B1DF /* Pods-Benepanda-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -817,14 +817,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "benepanda-tvOS/Info.plist";
+				INFOPLIST_FILE = "Benepanda-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.benepanda-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Benepanda-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -834,7 +834,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5690BB778C88CF39990E7612 /* Pods-benepanda-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 5690BB778C88CF39990E7612 /* Pods-Benepanda-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -844,24 +844,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "benepanda-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Benepanda-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.benepanda-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Benepanda-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/benepanda-tvOS.app/benepanda-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Benepanda-tvOS.app/Benepanda-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C824B78C058423A5C4E19F9 /* Pods-benepanda-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 5C824B78C058423A5C4E19F9 /* Pods-Benepanda-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -871,17 +871,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "benepanda-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Benepanda-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.benepanda-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Benepanda-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/benepanda-tvOS.app/benepanda-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Benepanda-tvOS.app/Benepanda-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1002,7 +1002,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "benepandaTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BenepandaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1011,7 +1011,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "benepanda" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Benepanda" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1020,7 +1020,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "benepanda-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Benepanda-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1029,7 +1029,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "benepanda-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Benepanda-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1038,7 +1038,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "benepanda" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Benepanda" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
