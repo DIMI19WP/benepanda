@@ -69,3 +69,8 @@ export type Paper = {
     UserName: string;
     IBT_PRINT_TYPE: string;
   };
+
+export type renderedPDF ={
+    pdf: string;
+    thumbnail: string;
+  }

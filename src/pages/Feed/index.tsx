@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 import BottomSheet from 'reanimated-bottom-sheet';
 import moment from 'moment';
+import useDimensions from '@rnhooks/dimensions';
 import 'moment/locale/ko';
 
 import PageWithTitle from 'templetes/PageWithTitle';
@@ -11,7 +12,7 @@ import { BriefPaper } from 'types/paper';
 import getPapers from 'functions/benedu/getPapersList';
 import {
   EmptyWrapper, InfoKey, PaperWrapper, PaperTitle, InfoWrapper,
-  LeftDate, NoPaper, PandaWrapper, PaperMainInfo, QuestionQuantityBadge,
+  LeftDate, NoPaper, PaperMainInfo, QuestionQuantityBadge,
   BottomSheetWrapper, Panda,
 } from './styleds';
 import DownloadModal from './DownloadModal';
@@ -19,7 +20,8 @@ import DownloadModal from './DownloadModal';
 export default (): JSX.Element => {
   const [papers, setPapers] = useState<BriefPaper[] | null>(null);
   const [refreshing, setRefreshing] = useState(false);
-  const [screenHeight] = useState(Dimensions.get('window').height);
+  const { width, height } = useDimensions('window');
+  const maxHeight = Math.max(width, height);
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [selectedPaper, selectPaper] = useState<{
     title: string;
@@ -42,7 +44,6 @@ export default (): JSX.Element => {
     })();
   }, []);
   useEffect(() => {
-    console.log(screenHeight);
     function closeModal(): boolean {
       if (isModalOpened) {
         bottomSheetRef.current.snapTo(1);
@@ -60,7 +61,7 @@ export default (): JSX.Element => {
       setRefreshing(false);
     });
   }, [refreshing]);
-  if (papers === null) return (<></>);
+  if (papers === null) return (<PageWithTitle titleText="밀린 과제"><></></PageWithTitle>);
   return (
     <>
       <PageWithTitle titleText={`밀린 과제 ${papers.length}개`}>
@@ -122,7 +123,7 @@ export default (): JSX.Element => {
         )}
       </PageWithTitle>
       <BottomSheet
-        snapPoints={[screenHeight, 0]}
+        snapPoints={[maxHeight, 0]}
         initialSnap={1}
         ref={bottomSheetRef}
         enabledContentGestureInteraction

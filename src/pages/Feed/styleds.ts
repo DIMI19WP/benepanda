@@ -89,7 +89,6 @@ export const BottomSheetContentWrapper = styled.View`
   background-color: white;
   bottom: 0;
   position: absolute;
-  
   border-radius: 24px;
   padding: 24px;
 `;
@@ -126,4 +125,12 @@ export const ConfigValue = styled.TextInput`
     border-radius: 6px;
     padding: 6px;
     flex: 1;
+`;
+
+export const ThumbnailViewer = styled.Image`
+  width: 300px;
+  height: 400px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 12px;
 `;

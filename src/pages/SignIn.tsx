@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import {
-  View, Dimensions, Text, Image, Alert,
+  View, Dimensions, Alert, ActivityIndicator,
 } from 'react-native';
 import styled from '@emotion/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { TextInput, TouchableNativeFeedback } from 'react-native-gesture-handler';
+import { TouchableNativeFeedback } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import Orientation from 'react-native-orientation';
+import useDimensions from '@rnhooks/dimensions';
 
 import loginWithBenedu from 'functions/benedu/login';
 import Background from 'assets/loginBackground.svg';
@@ -19,23 +19,12 @@ const Container = styled.KeyboardAvoidingView`
 
 const BGFitter = styled.View`
     position: absolute;
-    /* left: -91.77px; */
     bottom: 0px;
     z-index: -100;
     flex: 1;
     justify-items: self-end;
     transition: 1s;
     width: 100%;
-`;
-
-const LogoWrapper = styled.View`
-    width: 400px;
-    max-height: 200px;
-    margin-top: 100px;
-    & > * {
-    margin-left: auto;
-    margin-right: auto;
-  }
 `;
 
 const ContentWrapper = styled.View`
@@ -109,6 +98,7 @@ type Navigation = {
 const LoginBlock = ({ navigation }: Navigation) => {
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <InputArea>
       <View style={{ flex: 1 }} />
@@ -122,14 +112,23 @@ const LoginBlock = ({ navigation }: Navigation) => {
         <Input autoCompleteType="password" secureTextEntry textContentType="password" placeholder="비밀번호" value={password} onChangeText={(text): void => setPassword(text)} />
       </TextInputWrapper>
       <Button>
-        <TouchableNativeFeedback onPress={() => loginWithBenedu({
-          password,
-          username,
-        }).then(() => navigation.navigate('Feed')).catch((err: Error) => Alert.alert('로그인하지 못했습니다', `에러: ${err.message}`))}
+        <TouchableNativeFeedback onPress={() => {
+          setIsLoading(true);
+          loginWithBenedu({
+            password,
+            username,
+          }).then(() => navigation.navigate('Feed'))
+            .catch((err: Error) => {
+              Alert.alert('로그인하지 못했습니다', `에러: ${err.message}`);
+              setIsLoading(false);
+            });
+        }}
         >
-          <ButtonText>
-            로그인
-          </ButtonText>
+          {(isLoading) ? <ActivityIndicator style={{ margin: 11 }} /> : (
+            <ButtonText>
+              로그인
+            </ButtonText>
+          )}
         </TouchableNativeFeedback>
       </Button>
     </InputArea>
@@ -138,15 +137,13 @@ const LoginBlock = ({ navigation }: Navigation) => {
 
 export default ({ navigation }: Navigation): JSX.Element => {
 //   const [isHorizontal, setIsHorizontal] = useState(false);
-  const screenSize = Dimensions.get('window');
-  const isHorizontal = screenSize.width > screenSize.height;
+  const {
+    fontScale, width, height, scale,
+  } = useDimensions('window');
+  const isHorizontal = width > height;
   useEffect(() => {
-    // const orientationSetter = (orientation: Orientation.orientation): boolean => setIsHorizontal(orientation === 'LANDSCAPE');
-    // Orientation.addOrientationListener(orientationSetter);
-    // return (): void => {
-    //   Orientation.removeOrientationListener(orientationSetter);
-    // };
-  }, []);
+    console.log(width);
+  }, [width]);
 
   if (isHorizontal) {
     return (
@@ -168,7 +165,7 @@ export default ({ navigation }: Navigation): JSX.Element => {
       </ContentWrapper>
       <BGFitter>
         <View style={{ flex: 1 }} />
-        <Background width={`${screenSize.width}px`} />
+        <Background width={`${width}px`} />
       </BGFitter>
     </Container>
   );
