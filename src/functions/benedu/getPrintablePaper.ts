@@ -1,7 +1,7 @@
 import api from 'functions/request';
-import { Question } from 'types/paper';
+import { Paper } from 'types/paper';
 
-export default async (paperId: string): Promise<string> => {
+export default async (paperId: string): Promise<Paper> => {
   const formdata = new FormData();
   formdata.append('type', 'ymWuGYYSOfmJLRPkt3xlfw{e}{e}');
   formdata.append('values[]', paperId);
@@ -10,7 +10,6 @@ export default async (paperId: string): Promise<string> => {
     method: 'POST',
     body: formdata,
   });
-  const questionData: Question = JSON.parse(fetched.value);
-  console.log(questionData.Table01[0].EXE_HTML);
-  return fetched.value;
+  const questionData: Paper = JSON.parse(fetched.value);
+  return questionData;
 };

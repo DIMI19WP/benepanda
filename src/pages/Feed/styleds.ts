@@ -38,11 +38,22 @@ export const PandaWrapper = styled.View`
   }
 `;
 
+export const Panda = styled.Image`
+    width: 200px;
+    height: 200px;
+`;
+
+export const NoPaper = styled.Text`
+  font-family: 'NotoSansCJKkr-Black';
+  opacity: 0.7;
+  text-align: center;
+`;
+
 export const EmptyWrapper = styled.View`
-  flex: 1;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  align-self: center;
+  height: 100%;
 `;
 
 export const QuestionQuantityBadge = styled.Text`
@@ -56,11 +67,6 @@ export const QuestionQuantityBadge = styled.Text`
   text-align: center;
   border-radius: 60px;
   text-align-vertical: center;
-`;
-
-export const NoPaper = styled.Text`
-  font-family: 'NotoSansCJKkr-Black';
-  opacity: 0.7;
 `;
 
 export const LeftDate = styled.Text`
@@ -83,7 +89,6 @@ export const BottomSheetContentWrapper = styled.View`
   background-color: white;
   bottom: 0;
   position: absolute;
-  
   border-radius: 24px;
   padding: 24px;
 `;
@@ -92,7 +97,7 @@ export const BottomSheetWrapper = styled.View`
   height: 100%;
 `;
 export const PDFLoader = styled(Pdf)`
-    width: 400px;
+    width: 300px;
     height: 400px;
     margin-bottom: 6px;
 `;
@@ -120,4 +125,12 @@ export const ConfigValue = styled.TextInput`
     border-radius: 6px;
     padding: 6px;
     flex: 1;
+`;
+
+export const ThumbnailViewer = styled.Image`
+  width: 300px;
+  height: 400px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 12px;
 `;

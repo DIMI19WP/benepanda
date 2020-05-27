@@ -9,7 +9,6 @@ export default async (path: string, param?: RequestInit & {
     value: string;
 }> => {
   const session = (await CookieManager.get(ROOT_URI))['ASP.NET_SessionId'];
-
   const headers = {
     Cookie: `${(param?.headers as {Cookie: string})?.Cookie};ASP.NET_SessionId=${session}`,
   }
@@ -20,7 +19,7 @@ export default async (path: string, param?: RequestInit & {
 
   const fetched = await fetch(`${ROOT_URI}${path[0] === '/' ? path : `/${path}`}`, session ? {
     ...param,
-    headers: headers,
+    headers,
   } : param);
   return {
     headers: fetched.headers,
