@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "benepanda.app"
-               BlueprintName = "benepanda"
-               ReferencedContainer = "container:benepanda.xcodeproj">
+               BuildableName = "Benepanda.app"
+               BlueprintName = "Benepanda"
+               ReferencedContainer = "container:Benepanda.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "benepandaTests.xctest"
-               BlueprintName = "benepandaTests"
-               ReferencedContainer = "container:benepanda.xcodeproj">
+               BuildableName = "BenepandaTests.xctest"
+               BlueprintName = "BenepandaTests"
+               ReferencedContainer = "container:Benepanda.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "benepanda.app"
-            BlueprintName = "benepanda"
-            ReferencedContainer = "container:benepanda.xcodeproj">
+            BuildableName = "Benepanda.app"
+            BlueprintName = "Benepanda"
+            ReferencedContainer = "container:Benepanda.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "benepanda.app"
-            BlueprintName = "benepanda"
-            ReferencedContainer = "container:benepanda.xcodeproj">
+            BuildableName = "Benepanda.app"
+            BlueprintName = "Benepanda"
+            ReferencedContainer = "container:Benepanda.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
