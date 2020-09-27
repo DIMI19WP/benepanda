@@ -1,26 +1,29 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import {
-  Text, TouchableNativeFeedback, SectionList, Dimensions, BackHandler, Image,
-} from 'react-native';
-import BottomSheet from 'reanimated-bottom-sheet';
-import moment from 'moment';
-import useDimensions from '@rnhooks/dimensions';
-import 'moment/locale/ko';
+  Text, TouchableNativeFeedback, SectionList, BackHandler,
+} from "react-native";
+import BottomSheet from "reanimated-bottom-sheet";
+import moment from "moment";
+import useDimensions from "@rnhooks/dimensions";
+import "moment/locale/ko";
 
-import PageWithTitle from 'templetes/PageWithTitle';
-import { BriefPaper } from 'types/paper';
-import getPapers from 'functions/benedu/getPapersList';
+import PageWithTitle, { Background, Title } from "templetes/PageWithTitle";
+import { BriefPaper } from "types/paper";
+import getPapers from "functions/benedu/getTaskExamList";
+import getGeneratedExam from "functions/benedu/getGeneratedExam";
+import _ from "lodash";
 import {
   EmptyWrapper, InfoKey, PaperWrapper, PaperTitle, InfoWrapper,
   LeftDate, NoPaper, PaperMainInfo, QuestionQuantityBadge,
   BottomSheetWrapper, Panda,
-} from './styleds';
-import DownloadModal from './DownloadModal';
+} from "./styleds";
+import DownloadModal from "./DownloadModal";
 
 export default (): JSX.Element => {
-  const [papers, setPapers] = useState<BriefPaper[] | null>(null);
+  const [taskExams, setTaskExams] = useState<BriefPaper[] >();
+  const [generatedExams, setGeneratedExams] = useState<BriefPaper[]>();
   const [refreshing, setRefreshing] = useState(false);
-  const { width, height } = useDimensions('window');
+  const { width, height } = useDimensions("window");
   const maxHeight = Math.max(width, height);
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [selectedPaper, selectPaper] = useState<{
@@ -29,20 +32,30 @@ export default (): JSX.Element => {
   }>();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const bottomSheetRef = useRef<any>();
-  const sortedPapers = papers?.reduce((acc: {
-    [key: string]: BriefPaper[];
-  }, paper) => {
-    const key = paper.endedAt.fromNow();
-    if (acc[key]) acc[key] = [...acc[key], paper];
-    else acc[key] = [paper];
-    return acc;
-  }, {});
+  const [groupedExams, setGroupedExams] = useState<{
+    sectionName: string;
+    data: BriefPaper[];
+  }[]>();
+
   useEffect(() => {
-    moment.locale('ko');
+    if (!taskExams) return;
+    if (!generatedExams) return;
+    setGroupedExams(
+      Object.entries(_.groupBy(([...taskExams, ...generatedExams].map((e) => ({ ...e, sectionName: e.endedAt?.fromNow() || "문제은행" }))), "sectionName")).map((e) => ({
+        sectionName: e[0],
+        data: e[1],
+      })),
+    );
+  }, [taskExams, generatedExams]);
+
+  useEffect(() => {
+    moment.locale("ko");
     (async (): Promise<void> => {
-      setPapers(await getPapers());
+      setGeneratedExams(await getGeneratedExam());
+      setTaskExams(await getPapers());
     })();
   }, []);
+
   useEffect(() => {
     function closeModal(): boolean {
       if (isModalOpened) {
@@ -52,30 +65,30 @@ export default (): JSX.Element => {
       }
       return false;
     }
-    BackHandler.addEventListener('hardwareBackPress', closeModal);
-    return (): void => BackHandler.removeEventListener('hardwareBackPress', closeModal);
+    BackHandler.addEventListener("hardwareBackPress", closeModal);
+    return (): void => BackHandler.removeEventListener("hardwareBackPress", closeModal);
   }, [isModalOpened]);
   useEffect(() => {
     getPapers().then((updatedPapers) => {
-      setPapers(updatedPapers);
+      setTaskExams(updatedPapers);
       setRefreshing(false);
     });
   }, [refreshing]);
-  if (papers === null) return (<PageWithTitle titleText="밀린 과제"><></></PageWithTitle>);
+  if (!groupedExams) return (<PageWithTitle titleText="남은 과제"><></></PageWithTitle>);
   return (
     <>
-      <PageWithTitle titleText={`밀린 과제 ${papers.length}개`}>
-        {papers.length !== 0 ? (
-          sortedPapers && (
+
+      <Background>
+        {groupedExams.length !== 0 ? (
+          groupedExams && (
           <SectionList
-            sections={Object.keys(sortedPapers).map((key) => ({
-              title: key,
-              data: sortedPapers[key],
-            })).sort((a, b) => a.data[0].endedAt.valueOf() - b.data[0].endedAt.valueOf())}
-            keyExtractor={(paper): string => paper.paperTitle}
+            sections={groupedExams}
+            keyExtractor={(paper): string => paper.paperId}
             renderSectionHeader={
-              ({ section: { title } }): JSX.Element => <LeftDate>{title}</LeftDate>
+              ({ section: { sectionName } }): JSX.Element => <LeftDate>{sectionName}</LeftDate>
             }
+            scrollEnabled
+            ListHeaderComponent={(): JSX.Element => <Title>{`남은 과제 ${Number(taskExams?.length) + Number(generatedExams?.length)}개`}</Title>}
             refreshing={refreshing}
             onRefresh={(): void => setRefreshing(true)}
             renderItem={({ item: paper }): JSX.Element => (
@@ -97,13 +110,16 @@ export default (): JSX.Element => {
                       <InfoKey>과목</InfoKey>
                       <Text>{paper.subject}</Text>
                     </InfoWrapper>
+                    {paper.register
+                    && (
                     <InfoWrapper>
                       <InfoKey>출제자</InfoKey>
                       <Text>{paper.register}</Text>
                     </InfoWrapper>
+                    )}
                     <InfoWrapper>
-                      <InfoKey>시작일</InfoKey>
-                      <Text>{(paper.startedAt?.format('M월 D일'))}</Text>
+                      <InfoKey>생성일</InfoKey>
+                      <Text>{(paper.startedAt?.format("M월 D일"))}</Text>
                     </InfoWrapper>
                   </PaperMainInfo>
                   <QuestionQuantityBadge>
@@ -117,14 +133,16 @@ export default (): JSX.Element => {
           )
         ) : (
           <EmptyWrapper>
-            <Panda resizeMode="center" source={require('assets/panda.png')} />
+            <Panda resizeMode="center" source={require("assets/panda.png")} />
             <NoPaper>과제가 없어요!</NoPaper>
           </EmptyWrapper>
         )}
-      </PageWithTitle>
+      </Background>
+      {/* </PageWithTitle> */}
       <BottomSheet
         snapPoints={[maxHeight, 0]}
         initialSnap={1}
+        enabledManualSnapping
         ref={bottomSheetRef}
         enabledContentGestureInteraction
         onOpenStart={(): void => setIsModalOpened(() => true)}

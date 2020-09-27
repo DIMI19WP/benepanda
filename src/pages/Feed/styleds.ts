@@ -1,5 +1,5 @@
-import styled from '@emotion/native';
-import Pdf from 'react-native-pdf';
+import styled from "@emotion/native";
+import Pdf from "react-native-pdf";
 
 export const PaperWrapper = styled.View`
   background-color: white;
@@ -59,8 +59,8 @@ export const EmptyWrapper = styled.View`
 export const QuestionQuantityBadge = styled.Text`
   font-family: 'NotoSansCJKkr-Black';
   margin-top: 18px;
-  background-color: #F4F9EE;
-  color: #62A436;
+  background-color: #EFF9EE;
+  color: #3DA436;
   height: 60px;
   width: 60px;
   padding: 5px;
@@ -89,7 +89,8 @@ export const BottomSheetContentWrapper = styled.View`
   background-color: white;
   bottom: 0;
   position: absolute;
-  border-radius: 24px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
   padding: 24px;
 `;
 export const BottomSheetWrapper = styled.View`
@@ -107,7 +108,8 @@ export const Horizontal = styled.View`
 
 export const DownloadConfig = styled.View`
   flex: 1;
-  padding: 12px;
+  padding-left: 12px;
+  justify-content: flex-end;
 `;
 
 export const ConfigWrapper = styled(Horizontal)`

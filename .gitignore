@@ -60,3 +60,4 @@ buck-out/
 
 # Fonts
 *.otf
+/windows

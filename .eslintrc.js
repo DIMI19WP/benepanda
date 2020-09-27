@@ -29,13 +29,11 @@ module.exports = {
     ],
     rules: {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", "ts", "tsx"] }],
-        "no-unused-vars": "off",
-        "@typescript-eslint/no-unused-vars": ["error"],
+        "global-require": "off",
         "import/no-unresolved": "off",
+        "quotes": ["error", "double"],
+        "react/prop-types": "off",
         "import/extensions": "off",
-        "no-useless-catch": "off",
-        "no-underscore-dangle": "off",
-        "no-unused-expressions": "off",
         "react/jsx-props-no-spreading": "off"
     },
 };

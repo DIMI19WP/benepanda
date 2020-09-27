@@ -1,15 +1,16 @@
-import React, { ReactNode } from 'react';
-import styled from '@emotion/native';
+import React, { ReactNode } from "react";
+import styled from "@emotion/native";
 
-const Title = styled.Text`
+export const Title = styled.Text`
   font-size: 24px;
   font-family: 'NotoSansCJKkr-Black';
+  margin-top: 12px;
 `;
 
-const Background = styled.KeyboardAvoidingView`
+export const Background = styled.KeyboardAvoidingView`
   background-color: #F6F8FA;
   min-height: 100%;
-  padding: 12px 24px 0px 24px;  
+  padding: 0px 24px 0px 24px;  
   box-sizing: border-box;
   flex: 1;
 `;

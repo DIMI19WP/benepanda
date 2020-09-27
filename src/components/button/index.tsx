@@ -1,24 +1,22 @@
-import React from 'react';
+import React from "react";
 import {
   View, TouchableNativeFeedback, StyleProp, ViewStyle,
-} from 'react-native';
+} from "react-native";
 
 import {
   Button, ButtonText,
-} from './styleds';
+} from "./styleds";
 
 export default ({ onPress, children, style }: {
     children: string;
-    onPress(): void;
+    onPress(): any;
     style?: StyleProp<ViewStyle>;
 }): JSX.Element => (
-  <View style={[style]}>
-    <Button>
-      <TouchableNativeFeedback onPress={onPress}>
-        <ButtonText>
-          {children}
-        </ButtonText>
-      </TouchableNativeFeedback>
-    </Button>
-  </View>
+  <Button style={[style]}>
+    <TouchableNativeFeedback onPress={onPress}>
+      <ButtonText>
+        {children}
+      </ButtonText>
+    </TouchableNativeFeedback>
+  </Button>
 );

@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { View, ToastAndroid, ActivityIndicator } from 'react-native';
-import RNFS from 'react-native-fs';
-import FileViewer from 'react-native-file-viewer';
+import React, { useState, useEffect } from "react";
+import {
+  ActivityIndicator, Alert,
+} from "react-native";
+import RNFS from "react-native-fs";
+import FileViewer from "react-native-file-viewer";
 
-import Button from 'components/button';
-import { getRenderedPDFUri } from 'functions/benedu';
-import { renderedPDF } from 'types/paper';
-import { FILE_LOAD_URI } from 'types/constants';
+import { getRenderedPDFUri } from "functions/benedu";
+import { renderedPDF } from "types/paper";
+import { FILE_LOAD_URI } from "types/constants";
+import { BlockButton } from "components/atomics";
 import {
   BottomSheetContentWrapper, PaperTitle,
-  ThumbnailViewer, Horizontal, DownloadConfig, ConfigWrapper, ConfigValue,
-} from './styleds';
+  ThumbnailViewer, Horizontal, DownloadConfig, ConfigWrapper, ConfigKey, ConfigValue,
+} from "./styleds";
+import Answer from "./Answers";
 
 export default ({ paper }: {paper?: {
     title: string;
@@ -23,7 +26,7 @@ export default ({ paper }: {paper?: {
       try {
         if (paper) setLoadableUris(await getRenderedPDFUri(paper.paperId));
       } catch (e) {
-        alert('이런!', e.mesage);
+        Alert.alert("이런!", e.mesage);
       }
     })();
     return (): void => {
@@ -31,58 +34,44 @@ export default ({ paper }: {paper?: {
     };
   }, [paper?.paperId]);
   if (!paper) return <></>;
+  const openFile = async (): Promise<void> => {
+    setWaitingForOpen(true);
+    if (!loadableUris) return;
+    const downloadPath = `${RNFS.DocumentDirectoryPath}/${paper.title}.pdf`;
+    RNFS.downloadFile({
+      toFile: downloadPath,
+      fromUrl: FILE_LOAD_URI.replace("%s", loadableUris.pdf),
+    }).promise.then(() => {
+      FileViewer.open(downloadPath);
+      setWaitingForOpen(false);
+    });
+  };
   return (
     <BottomSheetContentWrapper>
       <PaperTitle>{paper?.title}</PaperTitle>
-      {!loadableUris ? <ActivityIndicator /> : (
+      {!loadableUris ? <ActivityIndicator color="#CDDBC4" /> : (
         <Horizontal>
           <ThumbnailViewer source={{
-            uri: FILE_LOAD_URI.replace('%s', loadableUris.thumbnail),
+            uri: FILE_LOAD_URI.replace("%s", loadableUris.thumbnail),
           }}
           />
-
+          <Answer />
           <DownloadConfig>
-            <View style={{ flex: 1 }} />
-            {/* <ConfigWrapper>
-              <ConfigValue placeholder="설정" />
-            </ConfigWrapper> */}
-            {/* <ConfigWrapper>
-            <ConfigKey>글자 크기</ConfigKey>
-            <ConfigValue keyboardType="number-pad" />
-          </ConfigWrapper> */}
-            <Horizontal style={{ paddingRight: 6 }}>
-              <View style={{ flex: 1 }} />
-              {isWaitingForOpen ? <ActivityIndicator /> : (
-                <Button
-                  style={{
-                    marginRight: 6,
-                  }}
-                  onPress={async (): Promise<void> => {
-                    setWaitingForOpen(true);
-                    if (!loadableUris) return;
-                    const downloadPath = `${RNFS.DocumentDirectoryPath}/${paper.title}.pdf`;
-                    RNFS.downloadFile({
-                      toFile: downloadPath,
-                      fromUrl: FILE_LOAD_URI.replace('%s', loadableUris.pdf),
-                    }).promise.then(() => {
-                      FileViewer.open(downloadPath);
-                      setWaitingForOpen(false);
-                    });
-                  }}
+            <ConfigWrapper>
+              <ConfigKey>1</ConfigKey>
+              <ConfigValue keyboardType="number-pad" />
+            </ConfigWrapper>
+            <Horizontal style={{ paddingRight: 6, justifyContent: "flex-end" }}>
+              {isWaitingForOpen ? <ActivityIndicator color="#CDDBC4" /> : (
+                <BlockButton
+                  onPress={openFile}
                 >
                   열기
-                </Button>
+                </BlockButton>
               )}
-              <Button onPress={(): void => {
-                if (!loadableUris) return;
-                RNFS.downloadFile({
-                  toFile: `${RNFS.DocumentDirectoryPath}/${paper.title}.pdf`,
-                  fromUrl: FILE_LOAD_URI.replace('%s', loadableUris.pdf),
-                }).promise.then(() => ToastAndroid.show(`"${RNFS.DocumentDirectoryPath}/${paper.title}.pdf"에 저장되었습니다.`, ToastAndroid.LONG));
-              }}
-              >
-                저장
-              </Button>
+              <BlockButton style={{ marginLeft: 6 }}>
+                정답 제출
+              </BlockButton>
             </Horizontal>
           </DownloadConfig>
         </Horizontal>
